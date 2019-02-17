@@ -8,7 +8,7 @@ body {
   font-size: 16px;
   margin: 0;
   background: #eff7fb;
-  font-family: "Inter UI", sans-serif;
+  font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
 }
 img {
@@ -24,7 +24,7 @@ input.gallery-radio {
   display: none;
 }
 h1.huge {
-  font: normal 4em/.1em "Inter UI",sans-serif;
+  font: normal 4em/.1em "Inter",sans-serif;
   font-weight: 900;
   font-style: italic;
 }

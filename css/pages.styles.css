@@ -4,7 +4,15 @@
 
 /********************************************/
 
-@import url('https://rsms.me/inter/inter-ui.css');
+@import url('https://rsms.me/inter/inter.css');
+html {
+	font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+ html {
+font-family: 'Inter var', sans-serif;
+}
+}
 /* backgrounds */
 
 #item1 {
@@ -59,10 +67,10 @@
 	color: white;
 }
 body {
-	font: 16px/1.5em "Inter UI", sans-serif;
+	font: 16px/1.5em "Inter", sans-serif;
 }
 h2 {
-	font: normal normal 500 4.706em "Inter UI", sans-serif;
+	font: normal normal 500 4.706em "Inter", sans-serif;
 	letter-spacing: -.015em;
 	line-height: normal;
 	background: -webkit-linear-gradient(right, #102f3f, #fff);
@@ -70,7 +78,7 @@ h2 {
 	-webkit-text-fill-color: transparent;
 }
 h1.huge {
-	font: normal normal 700 8.941em / .88em "Inter UI", sans-serif;
+	font: normal normal 700 8.941em / .88em "Inter", sans-serif;
 	position: relative;
 	top: -.2em;
 	letter-spacing: -.0066em;
@@ -86,7 +94,7 @@ h3.home {
 
 @media screen and (max-width: 32em) {
 h1.huge {
-	font: normal normal 700 4em/.8em "Inter UI", sans-serif;
+	font: normal normal 700 4em/.8em "Inter", sans-serif;
 }
 }
 
@@ -119,7 +127,7 @@ h1.huge {
 	margin-top: 0;
 }
 blockquote {
-	font: normal 1.5em/1.5em "Inter UI", sans-serif;
+	font: normal 1.5em/1.5em "Inter", sans-serif;
 }
 blockquote .author {
 	font-size: .75em;
@@ -179,7 +187,7 @@ blockquote .author {
 
 @media screen and (max-width: 32em) {
 h2 {
-	font: normal 500 3.4em "Inter UI", sans-serif;
+	font: normal 500 3.4em "Inter", sans-serif;
 	margin-top: 1.75em;
 	line-height: normal;
 }
@@ -266,7 +274,7 @@ fieldset {
 	padding: 0;
 }
 input, textarea {
-	font: 16px/1.5em "Inter UI", sans-serif;
+	font: 16px/1.5em "Inter", sans-serif;
 	color: #222;
 	border: 1px solid #eff7fb;
 	background: #fff;
@@ -276,7 +284,8 @@ input, textarea {
 	resize: none;
 }
 textarea {
-  height: 8em; }
+	height: 8em;
+}
 input:focus, textarea:focus {
 	border-color: #3399cc;
 	outline: none;
@@ -288,7 +297,7 @@ form textarea {
 	margin-bottom: 1em;
 }
 button, a.button {
-	font: 16px/1.5em "Inter UI", sans-serif;
+	font: 16px/1.5em "Inter", sans-serif;
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: .1em;
@@ -307,62 +316,7 @@ button[disabled], button[disabled]:hover, a.button[disabled], a.button[disabled]
 	border-color: #918f8d;
 	background-color: #918f8d;
 }
-/*input[type=text],
-input[type=email],
-input[type=url],
-input[type=password],
-textarea {
-	width: 100%;
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-}
-input[type=text],
-input[type=email],
-input[type=url],
-input[type=password] {
-  width: 50%;
-}
-input[type=text]:focus,
-input[type=email]:focus,
-input[type=url]:focus,
-input[type=password]:focus,
-textarea:focus {
-  outline: 0;
-  border-color: #4697e4;
-}
 
-@media (max-width: 600px) {
-  form > div {
-    margin: 0 0 15px 0; 
-  }
-  form > div > label,
-  legend {
-	  width: 100%;
-    float: none;
-    margin: 0 0 5px 0;
-  }
-  form > div > div,
-  form > div > fieldset > div {
-    width: 100%;
-    float: none;
-  }
-  input[type=text],
-  input[type=email],
-  input[type=url],
-  input[type=password],
-  textarea,
-  select {
-    width: 100%; 
-  }
-}
-@media (min-width: 1200px) {
-  form > div > label,
-	legend {
-  	text-align: right;
-  }
-}*/
 /*
 		Copyright (c) 2017 James Clarke - www.hi.agency
 
