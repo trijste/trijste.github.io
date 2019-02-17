@@ -1,0 +1,846 @@
+/********************************************/
+
+/* 		gallery styling and control			*/
+
+/********************************************/
+
+@supports (display: grid) {
+  /* webkit Styles */
+  @media screen and (min-width: 64em) {
+ .layout.gallery {
+ position: relative;
+ width: var(--boxwidth);
+ height: var(--boxheight);
+ display: grid;
+ grid-template-rows: minmax(1em, 4em) 1fr minmax(1em, 4em);
+ grid-template-columns: 1fr 1fr;
+ justify-content: space-around;
+ grid-gap: 0em;
+ background: transparent;
+}
+ .layout.gallery>.navbar {
+ position: relative;
+ z-index: 99;
+}
+ .layout.gallery>.sidebar {
+ position: relative;
+ z-index: 100;
+}
+ .layout.gallery>.content {
+ grid-row: 1 / span 3;
+ grid-column: 1 / span 2;
+ align-self: center;
+ justify-self: start;
+ display: grid;
+ grid-template-rows: 1fr 1fr;
+ grid-template-columns: 1fr 1fr;
+}
+ .layout.gallery>.content>.gallery-col1 {
+ width: calc(50vw - 2em);
+ height: calc(100vh - 4em);
+ grid-row: 1 / span 2;
+ grid-column: 1;
+ align-self: end;
+ justify-self: center;
+}
+ .layout.gallery>.content>.gallery-col2 {
+ width: calc(50vw - 2em);
+ height: calc(100vh - 4em);
+ grid-row: 1 / span 2;
+ grid-column: 2;
+ align-self: center;
+ justify-self: center;
+}
+ .layout.gallery>.content>.gallery-col1>.gallery-nav {
+ width: 22em;
+ margin: auto;
+ margin-top: calc(50vh - 18em);
+}
+ label.gallery-thumb {
+ display: inline-block;
+ background: white url() no-repeat center center;
+ background-size: cover;
+ width: 6em;
+ height: 0em;
+ padding-top: 6em;
+ overflow: hidden;
+ transition: all .2s ease-in-out;
+}
+ input.gallery-radio {
+ position: absolute;
+ left: -300%;
+}
+ .play::after {
+ content: url(../img/play-hover.png);
+ opacity: .5;
+ filter: grayscale(1);
+ position: absolute;
+ left: 75%;
+ top: 50%;
+ margin: 0;
+ transform: translate(-50%, -50%);
+ transition: all .2s ease-in-out;
+}
+ .play:hover::after {
+ content: url(../img/play-hover.png);
+ opacity: 1;
+ filter: grayscale(0);
+}
+ .gallery-imageholder {
+ background: black url() no-repeat center center;
+ background-size: contain;
+ border-radius: 0 2em 2em 0;
+ width: calc(50vw - 2em);
+ height: calc(100vh - 4em);
+ box-shadow: inset 0 0 100px rgba(0, 0, 0, .2);
+}
+}
+ @media screen and (max-width:64em) {
+ .layout.gallery {
+ max-width: 100%;
+ display: block;
+}
+ label.gallery-thumb {
+ display: inline-block;
+ background: white url() no-repeat center center;
+ background-size: cover;
+ width: 6em;
+ height: 0em;
+ padding-top: 6em;
+ overflow: hidden;
+ transition: transform .2s ease-in-out;
+}
+ input.gallery-radio {
+ position: absolute;
+ left: -300%;
+}
+ .layout.gallery>.content {
+ max-width: 100%;
+ display: block;
+}
+ .layout.gallery>.content>.gallery-col1 {
+ padding: 3em;
+ display: block;
+}
+ .layout.gallery>.content>.gallery-col2 {
+ display: block;
+}
+ .layout.gallery>.content>.gallery-col1>.gallery-nav h2 {
+}
+ .layout.gallery>.content>.gallery-col1>.gallery-nav {
+ width: 26em;
+ margin: auto;
+}
+ .gallery-imageholder {
+ margin: auto;
+ background: black url() no-repeat center center;
+ background-size: contain;
+ width: calc(100vw);
+ height: calc(50vh);
+ box-shadow: inset 0 0 100px rgba(0, 0, 0, .2);
+}
+}
+ @media screen and (max-width: 32em) {
+ .gallery-imageholder {
+ position: relative;
+ left: -1.5em;
+ margin: 0;
+ background: black url() no-repeat center center;
+ background-size: contain;
+ width: 100vw;
+ height: calc(60vh);
+ min-height: 20em;
+ box-shadow: inset 0 0 100px rgba(0, 0, 0, .2);
+}
+ .layout.gallery>.content>.gallery-col1>.gallery-nav {
+ width: 100%;
+ margin: 0;
+}
+ label.gallery-thumb {
+ width: 25%;
+ height: 0em;
+ padding-top: 25%;
+}
+}
+ @media screen and (max-height: 40em) {
+ body {
+ font-size: 14px;
+}
+}
+ @media screen and (max-height: 32em) and (min-width: 32em) {
+ .layout.gallery {
+ position: static;
+ max-width: 100%;
+ width: calc(100vw - 2em);
+ height: calc(200vh - 4em);
+}
+ label.gallery-thumb {
+ display: inline-block;
+ background: white url() no-repeat center center;
+ background-size: cover;
+ width: 6em;
+ height: 0em;
+ padding-top: 6em;
+ overflow: hidden;
+ transition: transform .2s ease-in-out;
+}
+ input.gallery-radio {
+ position: absolute;
+ left: -300%;
+}
+ .layout.gallery>.content {
+ width: calc(100vw - 2em);
+ height: calc(200vh - 4em);
+}
+ .layout.gallery>.content>.gallery-col1 {
+ height: calc(100vh - 4em);
+ grid-row: 2;
+ grid-column: 1 / span 2;
+ align-self: end;
+ justify-self: start;
+}
+ .layout.gallery>.content>.gallery-col2 {
+ width: calc(100vw - 2em);
+ height: calc(100vh - 4em);
+ grid-row: 1;
+ grid-column: 1 / span 2;
+ align-self: center;
+ justify-self: start;
+}
+ .layout.gallery>.content>.gallery-col1>.gallery-nav h2 {
+}
+ .layout.gallery>.content>.gallery-col1>.gallery-nav {
+ padding: 4em;
+ margin: auto;
+}
+ .gallery-imageholder {
+ margin: auto;
+ background: black url() no-repeat center center;
+ background-size: contain;
+ width: calc(100vw - 4em);
+ height: calc(100vh);
+ box-shadow: inset 0 0 100px rgba(0, 0, 0, .2);
+}
+}
+}
+@supports (display: -ms-grid) {
+  /* EDGE Styles */
+  @media screen and (min-width: 64em) {
+ .layout.gallery {
+ position: relative;
+ width: calc(100vw - 2em);
+ height: calc(100vh - 2em);
+ display: -ms-grid;
+ -ms-grid-rows: minmax(1em, 4em) 1fr minmax(1em, 4em);
+ -ms-grid-columns: 1fr 1fr;
+ -ms-grid-row-gap: 0em;
+ -ms-grid-column-gap: 0em;
+ background: transparent;
+}
+ .layout.gallery>.navbar {
+ position: relative;
+ z-index: 100;
+}
+ .layout.gallery>.sidebar {
+ position: relative;
+ z-index: 100;
+}
+ .layout.gallery>.content {
+ -ms-grid-row: 1;
+ -ms-grid-row-span: 3;
+ -ms-grid-column: 1;
+ -ms-grid-column-span: 2;
+ -ms-grid-column-align: center;
+ -ms-grid-row-align: start;
+ display: -ms-grid;
+ -ms-grid-rows: 1fr 1fr;
+ -ms-grid-columns: 1fr 1fr;
+}
+ .layout.gallery>.content>.gallery-col1 {
+ width: calc(50vw - 2em);
+ height: calc(100vh - 2em);
+ -ms-grid-row: 1;
+ -ms-grid-row-span: 2;
+ -ms-grid-column: 1;
+ -ms-grid-column-align: end;
+ -ms-grid-row-align: center;
+}
+ .layout.gallery>.content>.gallery-col2 {
+ width: calc(50vw - 2em);
+ height: calc(100vh - 2em);
+ -ms-grid-row: 1;
+ -ms-grid-row-span: 3;
+ -ms-grid-column: 2;
+ -ms-grid-column-align: start;
+ -ms-grid-row-align: center;
+}
+ .layout.gallery>.content>.gallery-col1>.gallery-nav {
+ width: 13em;
+ margin: auto;
+ margin-top: calc(50vh - 18em);
+}
+ label.gallery-thumb {
+ display: inline-block;
+ background: white url() no-repeat center center;
+ background-size: cover;
+ width: 6em;
+ height: 0em;
+ padding-top: 6em;
+ overflow: hidden;
+ transition: transform .2s ease-in-out;
+}
+ input.gallery-radio {
+ position: absolute;
+ left: -300%;
+}
+ .gallery-imageholder {
+ background: black url() no-repeat center center;
+ background-size: contain;
+ width: calc(50vw - 1em);
+ height: calc(100vh - 2em);
+ box-shadow: inset 0 0 100px rgba(0, 0, 0, .2);
+}
+}
+ @media screen and (max-width:64em) {
+ .layout.gallery {
+ max-width: 100%;
+ display: block;
+}
+ label.gallery-thumb {
+ display: inline-block;
+ background: white url() no-repeat center center;
+ background-size: cover;
+ width: 6em;
+ height: 0em;
+ padding-top: 6em;
+ overflow: hidden;
+ transition: transform .2s ease;
+}
+ input.gallery-radio {
+ position: absolute;
+ left: -300%;
+}
+ .layout.gallery>.content {
+ max-width: 100%;
+ display: block;
+}
+ .layout.gallery>.content>.gallery-col1 {
+ padding: 3em;
+ display: block;
+}
+ .layout.gallery>.content>.gallery-col2 {
+ display: block;
+}
+ .layout.gallery>.content>.gallery-col1>.gallery-nav h2 {
+}
+ .layout.gallery>.content>.gallery-col1>.gallery-nav {
+ width: 26em;
+ margin: auto;
+}
+ .gallery-imageholder {
+ display: block;
+ margin: auto;
+ background: black url() no-repeat center center;
+ background-size: contain;
+ width: calc(100vw);
+ height: calc(70vh);
+ box-shadow: inset 0 0 100px rgba(0, 0, 0, .2);
+}
+}
+ @media screen and (max-height: 40em) {
+ body {
+ font-size: 14px;
+}
+}
+}
+/* 		Mockup Gallery			*/
+
+#img1:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/iMac-mockup-on-desktop-reflecting-blinds.jpg);
+    list-style-image: url(../img/iMac-mockup-on-desktop-reflecting-blinds.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+#img2:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/tablet-and-phone-mockups-on-couch-arm.jpg);
+    list-style-image: url(../img/tablet-and-phone-mockups-on-couch-arm.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+#img3:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/macbook-mockup-on-desk-with-flowers.jpg);
+    list-style-image: url(../img/macbook-mockup-on-desk-with-flowers.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+#img4:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/surface-tablet-in-lap-mockup.jpg);
+    list-style-image: url(../img/surface-tablet-in-lap-mockup.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+#img5:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/Sony-phone-mockup-in-hand-outdoors.jpg);
+    list-style-image: url(../img/Sony-phone-mockup-in-hand-outdoors.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+#img6:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/womans-hands-on-macbook-keyboard-at-dusk-mockup.jpg);
+    list-style-image: url(../img/womans-hands-on-macbook-keyboard-at-dusk-mockup.jpg);
+    background-size: cover;
+    background-position: right, bottom;
+}
+#img7:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/man-holding-iPhone-X-mockup.jpg);
+    list-style-image: url(../img/man-holding-iPhone-X-mockup.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+#img8:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/iPhone-SE-sunny-mockup-in-hand.jpg);
+    list-style-image: url(../img/iPhone-SE-sunny-mockup-in-hand.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+#img9:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/white-phone-in-hand-mockup.jpg);
+    list-style-image: url(../img/white-phone-in-hand-mockup.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+#img1:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #img1thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+    border-radius: 50%;
+}
+#img2:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #img2thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+    border-radius: 50%;
+}
+#img3:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #img3thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+    border-radius: 50%;
+}
+#img4:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #img4thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+    border-radius: 50%;
+}
+#img5:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #img5thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+    border-radius: 50%;
+}
+#img6:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #img6thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+    border-radius: 50%;
+}
+#img7:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #img7thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+    border-radius: 50%;
+}
+#img8:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #img8thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+    border-radius: 50%;
+}
+#img9:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #img9thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+    border-radius: 50%;
+}
+#img1:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #img1thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#img2:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #img2thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#img3:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #img3thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#img4:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #img4thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#img5:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #img5thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#img6:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #img6thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#img7:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #img7thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#img8:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #img8thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#img9:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #img9thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#img1thumb {
+    background-image: url(../img/iMac-mockup-on-desktop-reflecting-blinds.jpg);
+    margin: 1px 2px;
+}
+#img2thumb {
+    background-image: url(../img/tablet-and-phone-mockups-on-couch-arm.jpg);
+    margin: 1px 2px;
+}
+#img3thumb {
+    background-image: url(../img/macbook-mockup-on-desk-with-flowers.jpg);
+    margin: 1px 2px;
+}
+#img4thumb {
+    background-image: url(../img/surface-tablet-in-lap-mockup.jpg);
+    margin: 1px 2px;
+}
+#img5thumb {
+    background-image: url(../img/Sony-phone-mockup-in-hand-outdoors.jpg);
+    margin: 1px 2px;
+}
+#img6thumb {
+    background-image: url(../img/womans-hands-on-macbook-keyboard-at-dusk-mockup.jpg);
+    margin: 1px 2px;
+}
+#img7thumb {
+    background-image: url(../img/man-holding-iPhone-X-mockup.jpg);
+    margin: 1px 2px;
+}
+#img8thumb {
+    background-image: url(../img/iPhone-SE-sunny-mockup-in-hand.jpg);
+    margin: 1px 2px;
+}
+#img9thumb {
+    background-image: url(../img/white-phone-in-hand-mockup.jpg);
+    margin: 1px 2px;
+}
+/* 		Video Gallery			*/
+
+#vid1:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/sometimes-chicken-thumb.jpg);
+    list-style-image: url(https://player.vimeo.com/video/162212957);
+    background-size: cover;
+    background-position: center, center;
+}
+#vid2:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/nyf-thumb.jpg);
+    list-style-image: url(https://player.vimeo.com/video/143542672);
+    background-size: cover;
+    background-position: center, center;
+}
+#vid3:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/magnet-thumb.jpg);
+    list-style-image: url(https://player.vimeo.com/video/285528257);
+    background-size: cover;
+    background-position: center, center;
+}
+#vid4:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/wpc-thumb.jpg);
+    list-style-image: url(https://player.vimeo.com/video/143549864);
+    background-size: cover;
+    background-position: center, center;
+}
+#vid5:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/roll-me-up-thumb.jpg);
+    list-style-image: url(https://player.vimeo.com/video/148044634);
+    background-size: cover;
+    background-position: center, center;
+}
+#vid6:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/bocce-cohence-thumb.jpg);
+    list-style-image: url(https://player.vimeo.com/video/21981043);
+    background-size: cover;
+    background-position: center, center;
+}
+#vid7:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/bluebird-thumb.jpg);
+    list-style-image: url(https://player.vimeo.com/video/162503949);
+    background-size: cover;
+    background-position: center, center;
+}
+#vid8:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/score-city-thumb.jpg);
+    list-style-image: url(https://player.vimeo.com/video/22409258);
+    background-size: cover;
+    background-position: center, center;
+}
+#vid9:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/norman.jpg);
+    list-style-image: url(https://player.vimeo.com/video/288656248);
+    background-size: cover;
+    background-position: center, center;
+}
+#vid1:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid1thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+	border-radius: 50%;
+}
+#vid2:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid2thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+	border-radius: 50%;
+}
+#vid3:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid3thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+	border-radius: 50%;
+}
+#vid4:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid4thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+	border-radius: 50%;
+}
+#vid5:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid5thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+	border-radius: 50%;
+}
+#vid6:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid6thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+	border-radius: 50%;
+}
+#vid7:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid7thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+	border-radius: 50%;
+}
+#vid8:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid8thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+	border-radius: 50%;
+}
+#vid9:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid9thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+	border-radius: 50%;
+}
+#vid1:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid1thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#vid2:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid2thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#vid3:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid3thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#vid4:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid4thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#vid5:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid5thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#vid6:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid6thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#vid7:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid7thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#vid8:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid8thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#vid9:hover~.layout.gallery>.content>.gallery-col1>.gallery-nav #vid9thumb {
+    transform: scale(1.066);
+	box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#vid1thumb {
+    background-image: url(../img/sometimes-chicken-thumb.jpg);
+    margin: 1px 2px;
+}
+#vid2thumb {
+    background-image: url(../img/nyf-thumb.jpg);
+    margin: 1px 2px;
+}
+#vid3thumb {
+    background-image: url(../img/magnet-thumb.jpg);
+    margin: 1px 2px;
+}
+#vid4thumb {
+    background-image: url(../img/wpc-thumb.jpg);
+    margin: 1px 2px;
+}
+#vid5thumb {
+    background-image: url(../img/roll-me-up-thumb.jpg);
+    margin: 1px 2px;
+}
+#vid6thumb {
+    background-image: url(../img/bocce-cohence-thumb.jpg);
+    margin: 1px 2px;
+}
+#vid7thumb {
+    background-image: url(../img/bluebird-thumb.jpg);
+    margin: 1px 2px;
+}
+#vid8thumb {
+    background-image: url(../img/score-city-thumb.jpg);
+    margin: 1px 2px;
+}
+#vid9thumb {
+    background-image: url(../img/norman.jpg);
+    margin: 1px 2px;
+}
+/* 		Print Gallery			*/
+
+#fig1:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/iMac-mockup-on-desktop-reflecting-blinds.jpg);
+    list-style-image: url(../img/iMac-mockup-on-desktop-reflecting-blinds.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+#fig2:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/tablet-and-phone-mockups-on-couch-arm.jpg);
+    list-style-image: url(../img/tablet-and-phone-mockups-on-couch-arm.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+#fig3:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/macbook-mockup-on-desk-with-flowers.jpg);
+    list-style-image: url(../img/macbook-mockup-on-desk-with-flowers.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+#fig4:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/surface-tablet-in-lap-mockup.jpg);
+    list-style-image: url(../img/surface-tablet-in-lap-mockup.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+#fig5:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/Sony-phone-mockup-in-hand-outdoors.jpg);
+    list-style-image: url(../img/Sony-phone-mockup-in-hand-outdoors.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+#fig6:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/womans-hands-on-macbook-keyboard-at-dusk-mockup.jpg);
+    list-style-image: url(../img/womans-hands-on-macbook-keyboard-at-dusk-mockup.jpg);
+    background-size: cover;
+    background-position: right, bottom;
+}
+#fig7:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/man-holding-iPhone-X-mockup.jpg);
+    list-style-image: url(../img/man-holding-iPhone-X-mockup.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+#fig8:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/iPhone-SE-sunny-mockup-in-hand.jpg);
+    list-style-image: url(../img/iPhone-SE-sunny-mockup-in-hand.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+#fig9:checked~.layout.gallery>.content>.gallery-col2>.gallery-imageholder {
+    background-image: url(../img/white-phone-in-hand-mockup.jpg);
+    list-style-image: url(../img/white-phone-in-hand-mockup.jpg);
+    background-size: cover;
+    background-position: center, center;
+}
+#fig1:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #fig1thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#fig2:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #fig2thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#fig3:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #fig3thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#fig4:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #fig4thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#fig5:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #fig5thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#fig6:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #fig6thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#fig7:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #fig7thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#fig8:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #fig8thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#fig9:checked~.layout.gallery>.content>.gallery-col1>.gallery-nav #fig9thumb {
+    transform: scale(1.066);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .2);
+}
+#fig1thumb {
+    background-image: url(../img/iMac-mockup-on-desktop-reflecting-blinds.jpg);
+    margin: 1px 2px;
+}
+#fig2thumb {
+    background-image: url(../img/tablet-and-phone-mockups-on-couch-arm.jpg);
+    margin: 1px 2px;
+}
+#fig3thumb {
+    background-image: url(../img/macbook-mockup-on-desk-with-flowers.jpg);
+    margin: 1px 2px;
+}
+#fig4thumb {
+    background-image: url(../img/surface-tablet-in-lap-mockup.jpg);
+    margin: 1px 2px;
+}
+#fig5thumb {
+    background-image: url(../img/Sony-phone-mockup-in-hand-outdoors.jpg);
+    margin: 1px 2px;
+}
+#fig6thumb {
+    background-image: url(../img/womans-hands-on-macbook-keyboard-at-dusk-mockup.jpg);
+    margin: 1px 2px;
+}
+#fig7thumb {
+    background-image: url(../img/man-holding-iPhone-X-mockup.jpg);
+    margin: 1px 2px;
+}
+#fig8thumb {
+    background-image: url(../img/iPhone-SE-sunny-mockup-in-hand.jpg);
+    margin: 1px 2px;
+}
+#fig9thumb {
+    background-image: url(../img/white-phone-in-hand-mockup.jpg);
+    margin: 1px 2px;
+}
+/*
+Copyright (c) 2017 James Clarke - www.hi.agency
+
+Version: 0.1.2
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+*/

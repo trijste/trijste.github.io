@@ -1,14 +1,341 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<title></title>
+<title>tristansteiner.ca | Info and Portfolio</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Tristan Steiner, Content Producer and Marketer">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/ui.unsupported.css" />
+<link rel="stylesheet" type="text/css" href="css/pages.styles.css" />
+<link rel="stylesheet" type="text/css" href="css/ui.webkit.css" />
+<link rel="stylesheet" type="text/css" href="css/ui.edge.css" />
+<link rel="stylesheet" type="text/css" href="css/ui.ie.css" />
+<link rel="stylesheet" type="text/css" href="css/pages.layout.css" />
+<link rel="stylesheet" type="text/css" href="css/page.gallery.css" />
+<link rel="stylesheet" type="text/css" href="css/keyboard.css" />
+<link rel="stylesheet" type="text/css" href="lity/dist/lity.css" />
 </head>
 
-<body>
-<p>Hello! I'm working on an updated page. Stay tuned!</p> 	
-<script type="text/javascript" src="js/index.js"></script>
-</body>
+<body class="">
+<input type="checkbox" id="menuChk" name="menuChk" aria-hidden="true" />
 
+<!--  desktop menu targets proxy-anchors -->
+<div class="menu desktop" id="menu" aria-hidden="true">
+	<label for="menuChk" class="menuCloseBtn" aria-label="Toggle Menu Visibility">&times;</label>
+	<h3>Menu</h3>
+	<ul>
+		<li><a href="#p1">Intro</a></li>
+		<li><a href="#p2">About</a></li>
+		<li><a href="#p3">Work</a></li>
+		<li><a href="#p4">Video</a></li>
+		<li><a href="#p5">Mocks</a></li>
+		<li><a href="#p6">Contact</a></li>
+		<!-- <li><a href="#p7">Example: Image</a></li>
+			<li><a href="#p8">Example: Quote</a></li>
+			<li><a href="#p9">Example: Gallery</a></li> -->
+		
+	</ul>
+</div>
+
+<!--  mobile menu controls -->
+<div class="menu-control-mobile" id="menu-control" aria-hidden="true">
+	<label for="menuChk" class="menuCtrlButton" aria-label="Toggle Menu Visibility">&#9776;</label>
+</div>
+
+<!--  mobile menu targets layout ids as anchors -->
+<div class="menu mobile" id="menuMobile" aria-hidden="true">
+	<label for="menuChk" class="menuCloseBtn" aria-label="Toggle Menu Visibility">&times;</label>
+	<h3>Menu</h3>
+	<nav role="navigation">
+		<ul>
+			<li><a href="#page1">Intro</a></li>
+			<li><a href="#page2">About</a></li>
+			<li><a href="#page3">Work</a></li>
+			<li><a href="#page4">Video</a></li>
+			<li><a href="#page5">Mocks</a></li>
+			<li><a href="#page6">Contact</a></li>
+			<!-- <li><a href="#page7">Example: Image</a></li>
+				<li><a href="#page8">Example: Quote</a></li>
+				<li><a href="#page9">Example: Gallery</a></li> -->
+		</ul>
+	</nav>
+</div>
+<div class="wrapper"> 
+	<!-- Proxy anchors associate with layout ids in CSS. Transforms applied to scroll pages to view in desktop mode-->
+	<div class="proxy-anchor" id="p1" aria-hidden="true"></div>
+	<div class="proxy-anchor" id="p2" aria-hidden="true"></div>
+	<div class="proxy-anchor" id="p3" aria-hidden="true"></div>
+	<div class="proxy-anchor" id="p4" aria-hidden="true"></div>
+	<div class="proxy-anchor" id="p5" aria-hidden="true"></div>
+	<div class="proxy-anchor" id="p6" aria-hidden="true"></div>
+	<!-- <div class="proxy-anchor" id="p7" aria-hidden="true"></div>
+		<div class="proxy-anchor" id="p8" aria-hidden="true"></div>
+		<div class="proxy-anchor" id="p9" aria-hidden="true"></div>
+		<div class="proxy-anchor" id="p10" aria-hidden="true"></div>
+		<div class="proxy-anchor" id="p11" aria-hidden="true"></div>
+		<div class="proxy-anchor" id="p12" aria-hidden="true"></div> --> 
+	<!--/ Proxy anchors -->
+	
+	<div class="grid">
+		<div class="item" id="item1"> <a href="#p1" class="focus-page" tabindex="-1" aria-hidden="true">focus</a>
+			<label class="selected-closer" for="menuChk" aria-hidden="true">&nbsp;</label>
+			<div id="image1" class="image">
+				<div class="image-container"><img class="roundleft" src="./img/pond.jpg" alt="TJS" style="max-width: var(--boxheight);">
+					<div class="fade roundleft"></div>
+				</div>
+			</div>
+			<div id="page1" class="layout home">
+				<div class="navbar">
+					<label for="menuChk" class="menuBtn" aria-label="Toggle Menu Visibility" aria-hidden="true">&#9776;</label>
+				</div>
+				<div class="content">
+					<h1 class="huge">Tristan Steiner</h1>
+					<h3 class="home">A technative content producer working in marketing</h3>
+				</div>
+				<div class="sidebar"> <a href="#p2" class="next-page" tabindex="-1" aria-hidden="true">Next</a> </div>
+			</div>
+		</div>
+		<div class="item" id="item2"> <a href="#p2" class="focus-page" tabindex="-1" aria-hidden="true">focus</a>
+			<label class="selected-closer" for="menuChk" aria-hidden="true">&nbsp;</label>
+			<div id="image2" class="image">
+				<div class="image-container"><img class="roundleft" src="./img/white-phone-in-hand-with-red-nails-pond-mockup.jpg" alt="Red Nails"></div>
+			</div>
+			<div id="page2" class="layout">
+				<div class="navbar">
+					<label for="menuChk" class="menuBtn" aria-label="Toggle Menu Visibility" aria-hidden="true">&#9776;</label>
+				</div>
+				<div class="content">
+					<h2>About</h2>
+					<p>Music theatre background, studied Digital Film Production in Toronto and Creative Writing in Montreal, hitched across Canada from Tofino to St John's and back, published stories and poems, found the love of my life and have two beautiful daughters.</p>
+					<p>This site is a testament to my fearless exploration and tweaker's delight — an indication of where hobby, craft and work intertwine into pattern.</p>
+				</div>
+				<div class="sidebar"> <a href="#p3" class="next-page" tabindex="-1" aria-hidden="true">Next</a> </div>
+			</div>
+		</div>
+		<div class="item" id="item3"> <a href="#p3" class="focus-page" tabindex="-1" aria-hidden="true">focus</a>
+			<label class="selected-closer" for="menuChk" aria-hidden="true">&nbsp;</label>
+			<div id="image3" class="image">
+				<div class="image-container"><img class="roundleft" src="./img/eddie.jpg" alt="Eddie"></div>
+			</div>
+			<div id="page3" class="layout">
+				<div class="navbar">
+					<label for="menuChk" class="menuBtn" aria-label="Toggle Menu Visibility" aria-hidden="true">&#9776;</label>
+				</div>
+				<div class="content">
+					<h2>Work</h2>
+					<p>I dove into computers at a young age and have built a few over the years. I have a strong grasp of both Windows and Mac systems, and of front-end languages, like CSS, HTML and a little JS.</p>
+					<p> I work mostly in Office 365 and Adobe Creative Cloud on projects that incorporate Illustrator, Photoshop, Dreamweaver, Premiere Pro and a little After Effects.</p>
+				</div>
+				<div class="sidebar"> <a href="#p4" class="next-page" tabindex="-1" aria-hidden="true">Next</a> </div>
+			</div>
+		</div>
+		<div class="item" id="item4"> <a href="#p4" class="focus-page" tabindex="-1" aria-hidden="true">focus</a>
+			<label class="selected-closer" for="menuChk" aria-hidden="true">&nbsp;</label>
+			<input type="radio" class="gallery-radio" name="video" id="vid1" checked>
+			<input type="radio" class="gallery-radio" name="video" id="vid2">
+			<input type="radio" class="gallery-radio" name="video" id="vid3">
+			<input type="radio" class="gallery-radio" name="video" id="vid4">
+			<input type="radio" class="gallery-radio" name="video" id="vid5">
+			<input type="radio" class="gallery-radio" name="video" id="vid6">
+			<input type="radio" class="gallery-radio" name="video" id="vid7">
+			<input type="radio" class="gallery-radio" name="video" id="vid8">
+			<input type="radio" class="gallery-radio" name="video" id="vid9">
+			<div id="page4" class="layout gallery">
+				<div class="navbar">
+					<label for="menuChk" class="menuBtn" aria-label="Toggle Menu Visibility" aria-hidden="true">&#9776;</label>
+				</div>
+				<div class="content">
+					<div class="gallery-col2">
+						<div class="gallery-imageholder play" style=""> </div>
+					</div>
+					<div class="gallery-col1">
+						<div class="gallery-nav">
+							<h2>#Video</h2>
+							<label for="vid1" class="gallery-thumb" id="vid1thumb">Video1</label>
+							<label for="vid2" class="gallery-thumb" id="vid2thumb">Video2</label>
+							<label for="vid3" class="gallery-thumb" id="vid3thumb">Video3</label>
+							<label for="vid4" class="gallery-thumb" id="vid4thumb">Video4</label>
+							<label for="vid5" class="gallery-thumb" id="vid5thumb">Video5</label>
+							<label for="vid6" class="gallery-thumb" id="vid6thumb">Video6</label>
+							<label for="vid7" class="gallery-thumb" id="vid7thumb">Video7</label>
+							<label for="vid8" class="gallery-thumb" id="vid8thumb">Video8</label>
+							<label for="vid9" class="gallery-thumb" id="vid9thumb">Video9</label>
+						</div>
+					</div>
+				</div>
+				<div class="sidebar"> <a href="#p5" class="next-page" tabindex="-1" aria-hidden="true">Next</a> </div>
+			</div>
+		</div>
+		<div class="item" id="item5"> <a href="#p5" class="focus-page" tabindex="-1" aria-hidden="true">focus</a>
+			<label class="selected-closer" for="menuChk" aria-hidden="true">&nbsp;</label>
+			<input type="radio" class="gallery-radio" name="image" id="img1" checked>
+			<input type="radio" class="gallery-radio" name="image" id="img2">
+			<input type="radio" class="gallery-radio" name="image" id="img3">
+			<input type="radio" class="gallery-radio" name="image" id="img4">
+			<input type="radio" class="gallery-radio" name="image" id="img5">
+			<input type="radio" class="gallery-radio" name="image" id="img6">
+			<input type="radio" class="gallery-radio" name="image" id="img7">
+			<input type="radio" class="gallery-radio" name="image" id="img8">
+			<input type="radio" class="gallery-radio" name="image" id="img9">
+			<div id="page5" class="layout gallery">
+				<div class="navbar">
+					<label for="menuChk" class="menuBtn" aria-label="Toggle Menu Visibility" aria-hidden="true">&#9776;</label>
+				</div>
+				<div class="content">
+					<div class="gallery-col2">
+						<div class="gallery-imageholder" style=""> </div>
+					</div>
+					<div class="gallery-col1">
+						<div class="gallery-nav">
+							<h2>#Mocks</h2>
+							<label for="img1" class="gallery-thumb" id="img1thumb">Image1</label>
+							<label for="img2" class="gallery-thumb" id="img2thumb">Image2</label>
+							<label for="img3" class="gallery-thumb" id="img3thumb">Image3</label>
+							<label for="img4" class="gallery-thumb" id="img4thumb">Image4</label>
+							<label for="img5" class="gallery-thumb" id="img5thumb">Image5</label>
+							<label for="img6" class="gallery-thumb" id="img6thumb">Image6</label>
+							<label for="img7" class="gallery-thumb" id="img7thumb">Image7</label>
+							<label for="img8" class="gallery-thumb" id="img8thumb">Image8</label>
+							<label for="img9" class="gallery-thumb" id="img9thumb">Image9</label>
+						</div>
+					</div>
+				</div>
+				<div class="sidebar"> <a href="#p6" class="next-page" tabindex="-1" aria-hidden="true">Next</a> </div>
+			</div>
+		</div>
+		<div class="item" id="item6"> <a href="#p6" class="focus-page" tabindex="-1" aria-hidden="true">focus</a>
+			<label class="selected-closer" for="menuChk" aria-hidden="true">&nbsp;</label>
+			<div id="image4" class="image left">
+				<div class="image-container"><img class="roundright" src="img/cats.jpg" alt="Artwork"></div>
+			</div>
+			<div id="page6" class="layout left">
+				<div class="navbar">
+					<label for="menuChk" class="menuBtn" aria-label="Toggle Menu Visibility" aria-hidden="true">&#9776;</label>
+				</div>
+				<div class="content">
+					<h2>#Contact</h2>
+					<form method="POST" action="https://formspree.io/tristansteiner@icloud.com">
+						<input type="text" name="name" placeholder="Name">
+						<input type="email" name="email" placeholder="Email">
+						<textarea name="message" placeholder="Message"></textarea>
+						<button type="submit">Contact</button>
+					</form>
+				</div>
+				<div class="sidebar"> <a href="#p1" class="next-page" tabindex="-1" aria-hidden="true">First</a> </div>
+			</div>
+		</div>
+		
+		<!--
+
+			<div class="item" id="item7">
+				<a href="#p7" class="focus-page" tabindex="-1" aria-hidden="true">focus</a><label class="selected-closer" for="menuChk" aria-hidden="true">&nbsp;</label>
+				<div id="image7" class="image splash">
+					<div class="image-container"><img src="https://source.unsplash.com/1074x720/?meat" alt="Artwork"></div>
+				</div>
+				<div id="page7" class="layout splash">
+
+					<div class="navbar">
+						<label for="menuChk" class="menuBtn" aria-label="Toggle Menu Visibility" aria-hidden="true">&#9776;</label>
+					</div>
+					<div class="content">
+						<p>An example of a full-page image, with caption text.</p>
+					</div>
+					<div class="sidebar">
+						<a href="#p8" class="next-page" tabindex="-1" aria-hidden="true">Next</a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="item" id="item8">
+				<a href="#p8" class="focus-page" tabindex="-1" aria-hidden="true">focus</a><label class="selected-closer" for="menuChk" aria-hidden="true">&nbsp;</label>
+				<div id="image8" class="image">
+					<div class="image-container"><img src="img/quote.png" alt="Artwork"></div>
+				</div>
+				<div id="page8" class="layout">
+
+					<div class="navbar">
+						<label for="menuChk" class="menuBtn" aria-label="Toggle Menu Visibility" aria-hidden="true">&#9776;</label>
+					</div>
+					<div class="content">
+						<blockquote>
+							The beautiful thing about learning is nobody can take it away from you.
+							<div class="author">—B.B. King</div>
+						</blockquote>
+					</div>
+					<div class="sidebar">
+						<a href="#p9" class="next-page" tabindex="-1" aria-hidden="true">Next</a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="item" id="item9">
+				<a href="#p9" class="focus-page" tabindex="-1" aria-hidden="true">focus</a><label class="selected-closer" for="menuChk" aria-hidden="true">&nbsp;</label>
+
+				<input type="radio" class="gallery-radio" name="image" id="img1" checked>
+				<input type="radio" class="gallery-radio" name="image" id="img2">
+				<input type="radio" class="gallery-radio" name="image" id="img3">
+				<input type="radio" class="gallery-radio" name="image" id="img4">
+				<input type="radio" class="gallery-radio" name="image" id="img5">
+				<input type="radio" class="gallery-radio" name="image" id="img6">
+				<input type="radio" class="gallery-radio" name="image" id="img7">
+				<input type="radio" class="gallery-radio" name="image" id="img8">
+
+				<div id="page9" class="layout gallery">
+
+					<div class="navbar">
+						<label for="menuChk" class="menuBtn" aria-label="Toggle Menu Visibility" aria-hidden="true">&#9776;</label>
+					</div>
+					<div class="content">
+						<div class="gallery-col2">
+							<div class="gallery-imageholder">
+
+							</div>
+						</div>
+						<div class="gallery-col1">
+							<div class="gallery-nav">
+								<h2>Gallery</h2>
+								<label for="img1" class="gallery-thumb" id="img1thumb">Image1</label>
+								<label for="img2" class="gallery-thumb" id="img2thumb">Image2</label>
+								<label for="img3" class="gallery-thumb" id="img3thumb">Image3</label>
+								<label for="img4" class="gallery-thumb" id="img4thumb">Image4</label>
+								<label for="img5" class="gallery-thumb" id="img5thumb">Image5</label>
+								<label for="img6" class="gallery-thumb" id="img6thumb">Image6</label>
+								<label for="img7" class="gallery-thumb" id="img7thumb">Image7</label>
+								<label for="img8" class="gallery-thumb" id="img8thumb">Image8</label>
+							</div>
+						</div>
+
+					</div>
+					<div class="sidebar">
+						<a href="#p1" class="next-page" tabindex="-1" aria-hidden="true">Next</a>
+					</div>
+				</div>
+			</div>
+-->
+		
+		<div class="footer"></div>
+	</div>
+</div>
+<script src="lity/vendor/jquery.js"></script> 
+<script src="lity/dist/lity.js"></script> 
+<script src="lity/gal.js"></script>
+</body>
 </html>
+
+<!-- Copyright (c) 2017 James Clarke - www.hi.agency
+
+Version: 0.1.2
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software. -->
