@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+.portfolio, .button {
+  font-family: 'Lato', sans-serif;
+}
+.portfolio {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.portfolio, .filters {
+  text-align: center;
+}
+/* ---- button ---- */
+.button {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #fff;
+  border: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase
+}
+.button:hover {
+  background-color: #000;
+  color: #fff;
+}
+.button:active, .button.is-checked {
+  background-color: #cc212c;
+}
+.button:focus {
+  outline: none;
+}
+.button.is-checked {
+  color: white;
+}
+/* ---- button-group ---- */
+.button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.button-group .button {
+  float: left;
+  border-radius: 0;
+  margin-left: 0;
+  margin: 2px 5px 0 2px;
+}
+/* ---- isotope ---- */
+.grid {
+  background: #fff;
+  width: 100%;
+}
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.grid > div {
+  overflow: hidden;
+  border: 1px solid #f2f2f2;
+}
+.grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top
+}
+/* ui group */
+.ui-group {
+  display: inline-block;
+}
+.ui-group .button-group {
+  display: inline-block;
+  margin-right: 20px;
+}
+/* content */
+.content {
+  width: 214px;
+  height: 214px;
+  margin: 2px;
+  float: left;
+}
+.video-bg {
+  width: 380px;
+  height: 214px;
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 850px) {
+  .content {
+    width: 114px;
+    height: 114px;
+    margin: 1px;
+  }
+  .video-bg {
+    width: 202px;
+    height: 114px;
+  }
+}
+.content.licensed, .content-licensed img {
+  background: #262424;
+  color: #262424;
+}
+.content.custom {
+  background: #cc212c;
+  color: #cc212c;
+}
+.featherlight-content {
+  scrollbar-width: none;
+}
+.linkwrap {
+  position: relative;
+  display: inline-block;
+  right: 40%
+}
+.blocker {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0);
+}
+.linkwrap iframe {
+  z-index: 2;
+}
+.inline {
+  display: none
+}
+.caption {
+  position: relative;
+  height: auto;
+  color: #fff;
+  padding: 10px 0px 12px;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  max-width: 66%;
+  margin: 0 auto;
+}
+.featherlight, .featherlight-content {
+  padding: 0 !important;
+  border-bottom: 0 !important;
+  background: rgba(0,0,0,0.66)!important;
+}
+.featherlight-content {
+  max-width: 980px;
+  max-height: 551px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+}
