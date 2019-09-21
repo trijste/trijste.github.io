@@ -1,32 +1,69 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
-.portfolio, .button {
-  font-family: 'Lato', sans-serif;
+@import url('https://rsms.me/inter/inter.css');
+html {
+  font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+body {
+  background-color: #eff7fb;
+}
+.back {
+  position: relative;
+  float: left;
+  text-decoration: none;
+  color: #102f3f;
+  margin-top: -2.5em;
+  margin-left: -2.25em;
+}
+.back:hover {
+  text-decoration: underline;
+  color: #3399cc
 }
 .portfolio {
   max-width: 1100px;
   margin: 0 auto;
+  background-color: #fff;
+  border-radius: 2em;
+  padding: 4em;
+  box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, .2);
 }
 .portfolio, .filters {
   text-align: center;
+  margin-bottom: 1.5rem;
+}
+h2 {
+  font: normal normal 500 4.706em "Inter", sans-serif;
+  line-height: auto;
+  letter-spacing: -.015em;
+  background: -webkit-linear-gradient(right, #102f3f, #fff);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 /* ---- button ---- */
 .button {
   display: inline-block;
-  padding: 10px 30px;
-  background-color: #fff;
+  padding: 0.832em 1.414em 0.707em;
+  background-color: #102f3f;
   border: none;
-  color: #000;
-  font-size: 16px;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #fff;
+  font: 16px/1.5em "Inter", sans-serif;
   cursor: pointer;
-  text-transform: uppercase
 }
 .button:hover {
-  background-color: #000;
+  background-color: #3399cc;
   color: #fff;
 }
 .button:active, .button.is-checked {
-  background-color: #cc212c;
+  background-color: #3399cc;
 }
 .button:focus {
   outline: none;
@@ -44,11 +81,11 @@
   float: left;
   border-radius: 0;
   margin-left: 0;
-  margin: 2px 5px 0 2px;
+  margin: 5px;
 }
 /* ---- isotope ---- */
 .grid {
-  background: #fff;
+  background: transparent;
   width: 100%;
 }
 /* clear fix */
@@ -59,13 +96,17 @@
 }
 .grid > div {
   overflow: hidden;
-  border: 1px solid #f2f2f2;
+  transition: .2s;
+}
+.grid > div:hover {
+  transform: scale(1.025);
 }
 .grid img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top
+  object-position: top;
+  transition: .2s;
 }
 /* ui group */
 .ui-group {
@@ -77,14 +118,14 @@
 }
 /* content */
 .content {
-  width: 214px;
-  height: 214px;
-  margin: 2px;
+  width: 265px;
+  height: 265px;
+  margin: 5px;
   float: left;
 }
 .video-bg {
-  width: 380px;
-  height: 214px;
+  width: 471px;
+  height: 265px;
 }
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 850px) {
@@ -97,14 +138,6 @@
     width: 202px;
     height: 114px;
   }
-}
-.content.licensed, .content-licensed img {
-  background: #262424;
-  color: #262424;
-}
-.content.custom {
-  background: #cc212c;
-  color: #cc212c;
 }
 .featherlight-content {
   scrollbar-width: none;
@@ -141,10 +174,10 @@
 .featherlight, .featherlight-content {
   padding: 0 !important;
   border-bottom: 0 !important;
-  background: rgba(0,0,0,0.66)!important;
+  background: rgba(0, 0, 0, 0.66) !important;
 }
 .featherlight-content {
   max-width: 980px;
   max-height: 551px;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
 }
