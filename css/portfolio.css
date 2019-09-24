@@ -165,10 +165,12 @@ h2 {
         height: 114px
     }
 	.portfolio {
-		padding: 1em;
+		padding: 16px;
+		width: calc(100% - 238px);
+		margin: 0 auto;
 	}
 	h2 {
-		font-size: 2em;
+		font-size: 30px;
 	}
 }
 
