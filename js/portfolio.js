@@ -53,44 +53,14 @@ $.featherlight.prototype.afterContent = function() {
   $('<div class="caption">').text(caption).appendTo(this.$instance.find('.featherlight-content'));
 };
 //hash code
-function getHashFilter() {
-  // get filter=filterName
-  var matches = location.hash.match( /filter=([^&]+)/i );
-  var hashFilter = matches && matches[1];
-  return hashFilter && decodeURIComponent( hashFilter );
-}
-
-// bind filter button click
-var $filterButtonGroup = $('.button-group');
-$filterButtonGroup.on( 'click', 'button', function() {
-  var filterAttr = $( this ).attr('data-filter');
-  // set filter in hash
-  location.hash = 'filter=' + encodeURIComponent( filterAttr );
+// Isotope filter by URL Hash 
+jQuery(document).ready( function($) {
+// Store # parameter and add "." before hash
+var hashID = "." + window.location.hash.substring(1);
+//  Set Isotope Container
+var $container = $('.grid');
+    $container.isotope({
+        itemSelector: ".content",
+        filter: hashID, // the variable filter           
 });
-
-var isIsotopeInit = false;
-
-function onHashchange() {
-  var hashFilter = getHashFilter();
-  if ( !hashFilter && isIsotopeInit ) {
-    return;
-  }
-  isIsotopeInit = true;
-  // filter isotope
-  $grid.isotope({
-    itemSelector: '.content',
-    layoutMode: 'fitRows',
-    // use filterFns
-    filter: filterFns[ hashFilter ] || hashFilter
-  });
-  // set selected class on button
-  if ( hashFilter ) {
-    $filterButtonGroup.find('.is-checked').removeClass('is-checked');
-    $filterButtonGroup.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
-  }
-}
-
-$(window).on( 'hashchange', onHashchange );
-
-// trigger event handler to init Isotope
-onHashchange();
+});
