@@ -164,6 +164,12 @@ h2 {
         width: 202px;
         height: 114px
     }
+	.portfolio {
+		padding: 1em;
+	}
+	h2 {
+		font-size: 2em;
+	}
 }
 
 .featherlight-content {
