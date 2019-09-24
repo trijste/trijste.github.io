@@ -166,7 +166,7 @@ h2 {
     }
 	.portfolio {
 		padding: 16px;
-		width: calc(100% - 270px);
+		widthL 100%;
 		margin: 0 auto;
 	}
 	h2 {
