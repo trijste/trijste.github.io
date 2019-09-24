@@ -1,188 +1,217 @@
-@import url('https://rsms.me/inter/inter.css');
+@import url(https://rsms.me/inter/inter.css);
+
 html {
-  font-family: 'Inter', sans-serif;
+    font-family: "Inter",sans-serif
 }
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter var', sans-serif;
-  }
+
+@supports (font-variation-settings:normal) {
+    html {
+        font-family: "Inter var",sans-serif
+    }
 }
+
 body {
-  background-color: #eff7fb;
+    background-color: #eff7fb
 }
+
 .hide {
-	display: none;
+    display: none
 }
+
 .back {
-  position: relative;
-  float: left;
-  text-decoration: none;
-  color: #102f3f;
-  margin-top: -2.5em;
-  margin-left: -2.25em;
+    position: relative;
+    float: left;
+    text-decoration: none;
+    color: #102f3f;
+    margin-top: -2.5em;
+    margin-left: -2.25em
 }
+
 .back:hover {
-  text-decoration: underline;
-  color: #3399cc
+    text-decoration: underline;
+    color: #39c
 }
+
 .portfolio {
-  max-width: 1100px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 2em;
-  padding: 4em;
-  box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, .2);
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 2em;
+    padding: 4em;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.2);
+    text-align: center
 }
-.portfolio, .filters {
-  text-align: center;
-  margin-bottom: 1.5rem;
+
+.filters,.portfolio,h2 {
+    margin-bottom: 1.5rem
 }
+
+.filters {
+    text-align: center
+}
+
 h2 {
-  font: normal normal 500 4.706em "Inter", sans-serif;
-  line-height: auto;
-  letter-spacing: -.015em;
-  background: -webkit-linear-gradient(right, #102f3f, #fff);
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
+    font: 500 4.706em "Inter",sans-serif;
+    line-height: auto;
+    letter-spacing: -.015em;
+    background: -webkit-linear-gradient(right,#102f3f,#fff);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0
 }
-/* ---- button ---- */
+
 .button {
-  display: inline-block;
-  padding: 0.832em 1.414em 0.707em;
-  background-color: #fff;
-  border: none;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  color: #102f3f;
-  font: 16px/1.5em "Inter", sans-serif;
-  cursor: pointer;
+    display: inline-block;
+    padding: .832em 1.414em .707em;
+    background-color: #fff;
+    border: 0;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #102f3f;
+    font: 16px/1.5em "Inter",sans-serif;
+    cursor: pointer
 }
+
 .button:hover {
-  background-color: #3399cc;
-  color: #fff;
+    background-color: #39c;
+    color: #fff
 }
-.button:active, .button.is-checked {
-  background-color: #102f3f;
-  color: #fff;
+
+.button:active {
+    color: #fff
 }
+
+.button.is-checked,.button:active {
+    background-color: #102f3f
+}
+
 .button:focus {
-  outline: none;
+    outline: 0
 }
+
 .button.is-checked {
-  color: white;
+    color: #fff
 }
-/* ---- button-group ---- */
-.button-group:after {
-  content: '';
-  display: block;
-  clear: both;
+
+.button-group:after,.grid:after {
+    content: "";
+    display: block;
+    clear: both
 }
+
 .button-group .button {
-  float: left;
-  border-radius: 0;
-  margin-left: 0;
-  margin: 5px;
+    float: left;
+    border-radius: 0;
+    margin: 5px
 }
-/* ---- isotope ---- */
+
 .grid {
-  background: transparent;
-  width: 100%;
+    background: 0 0;
+    width: 100%
 }
-/* clear fix */
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
+
+.grid>div {
+    overflow: hidden;
+    transition: .2s
 }
-.grid > div {
-  overflow: hidden;
-  transition: .2s;
+
+.grid>div:hover {
+    -webkit-transform: scale(1.025);
+    transform: scale(1.025)
 }
-.grid > div:hover {
-  transform: scale(1.025);
-}
+
 .grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  transition: .3s;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top;
+    transition: .3s
 }
-/* ui group */
+
 .ui-group {
-  display: inline-block;
+    display: inline-block
 }
+
 .ui-group .button-group {
-  display: inline-block;
-  margin-right: 20px;
+    display: inline-block;
+    margin-right: 20px
 }
-/* content */
+
 .content {
-  width: 257px;
-  height: 257px;
-  margin: 5px;
-  float: left;
-  border: 1px solid #c0e0ef
+    width: 257px;
+    height: 257px;
+    margin: 5px;
+    float: left;
+    border: 1px solid #c0e0ef
 }
+
 .video-bg {
-  width: 471px;
-  height: 265px;
+    width: 471px;
+    height: 265px
 }
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 850px) {
-  .content {
-    width: 114px;
-    height: 114px;
-    margin: 1px;
-  }
-  .video-bg {
-    width: 202px;
-    height: 114px;
-  }
+
+@media only screen and (min-device-width:320px) and (max-device-width:850px) {
+    .content {
+        width: 114px;
+        height: 114px;
+        margin: 1px
+    }
+
+    .video-bg {
+        width: 202px;
+        height: 114px
+    }
 }
+
 .featherlight-content {
-  scrollbar-width: none;
+    scrollbar-width: none
 }
+
 .linkwrap {
-  position: relative;
-  display: inline-block;
-  right: 40%
+    position: relative;
+    display: inline-block;
+    right: 40%
 }
+
 .blocker {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background: 0 0
 }
+
 .linkwrap iframe {
-  z-index: 2;
+    z-index: 2
 }
+
 .inline {
-  display: none
+    display: none
 }
+
 .caption {
-  position: relative;
-  height: auto;
-  color: #fff;
-  padding: 10px 0px 12px;
-  font-family: 'Inter var', sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-  max-width: 821px;
-  margin: 0 16px;
+    position: relative;
+    height: auto;
+    color: #fff;
+    padding: 10px 0 12px;
+    font-family: "Inter",sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 821px;
+    margin: 0 16px
 }
-.featherlight, .featherlight-content {
-  padding: 0 !important;
-  border-bottom: 0 !important;
-  background: rgba(4, 12, 16, 0.9) !important;
+
+.featherlight,.featherlight-content {
+    padding: 0!important;
+    border-bottom: 0!important;
+    background: rgba(4,12,16,.9)!important
 }
+
 .featherlight-content {
-  max-width: 1060px;
-  max-height: 551px;
-  box-shadow: 0 0 8px rgba(4, 12, 16, 0.9);;
+    max-width: 1060px;
+    max-height: 551px;
+    box-shadow: 0 0 8px rgba(4,12,16,.9)
 }
