@@ -169,7 +169,7 @@ h2 {
   height: auto;
   color: #fff;
   padding: 10px 0px 12px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Inter var', sans-serif;
   font-size: 16px;
   line-height: 18px;
   max-width: 821px;
@@ -181,7 +181,7 @@ h2 {
   background: rgba(4, 12, 16, 0.9) !important;
 }
 .featherlight-content {
-  max-width: 980px;
+  max-width: 1060px;
   max-height: 551px;
   box-shadow: 0 0 8px rgba(4, 12, 16, 0.9);;
 }
