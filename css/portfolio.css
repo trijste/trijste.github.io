@@ -153,6 +153,7 @@ h2 {
     position: absolute;
     left: 32px;
     top: 16px;
+	margin: 0;
   }
 }
 .featherlight-content {
