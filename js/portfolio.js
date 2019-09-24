@@ -52,15 +52,4 @@ $.featherlight.prototype.afterContent = function() {
   this.$instance.find('.caption').remove();
   $('<div class="caption">').text(caption).appendTo(this.$instance.find('.featherlight-content'));
 };
-//hash code
-// Isotope filter by URL Hash 
-jQuery(document).ready( function($) {
-// Store # parameter and add "." before hash
-var hashID = "." + window.location.hash.substring(1);
-//  Set Isotope Container
-var $container = $('.grid');
-    $container.isotope({
-        itemSelector: ".content",
-        filter: hashID, // the variable filter           
-});
-});
+
