@@ -172,6 +172,10 @@ h2 {
 	h2 {
 		font-size: 50px;
 	}
+	.featherlight-content {
+    max-width: 90vw;
+    max-height: 80vh;
+    }
 }
 
 .featherlight-content {
