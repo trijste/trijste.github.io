@@ -156,6 +156,7 @@ h2 {
 .video-bg {
   width: calc(var(--content-width)*1.8);
   margin-left: -40%;
+  border: 0
 }
 
 .featherlight-content {
