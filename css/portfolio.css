@@ -1,28 +1,23 @@
 @import url(https://rsms.me/inter/inter.css);
-
 :root {
   --content-space: 5px;
-  --content-width: calc((1100px - (var(--content-space) * 10)) / 5);
+  --content-width: calc((1100px - (var(--content-space) * 10)) / 5)
 }
-
 html {
   font-family: "Inter", sans-serif;
 }
-
 @supports (font-variation-settings: normal) {
   html {
     font-family: "Inter var", sans-serif;
   }
 }
-
 body {
   background-color: #eff7fb;
+  margin: 0;
 }
-
 .bak-link {
   position: relative;
 }
-
 .back {
   position: absolute;
   left: 0;
@@ -30,13 +25,10 @@ body {
   text-decoration: none;
   color: #102f3f;
 }
-
-.back:active,
-.back:hover {
+.back:active, .back:hover {
   text-decoration: underline;
   color: #39c;
 }
-
 .portfolio {
   max-width: 1100px;
   background-color: #fff;
@@ -45,12 +37,9 @@ body {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
   margin: 2em auto;
 }
-
-.filters,
-.portfolio {
+.filters, .portfolio {
   text-align: center;
 }
-
 h2 {
   font: 500 4.706em "Inter", sans-serif;
   line-height: auto;
@@ -61,11 +50,9 @@ h2 {
   -webkit-text-fill-color: transparent;
   margin: 0;
 }
-
 .ui-group {
   margin: 0.5rem 0 1rem;
 }
-
 .button {
   display: inline-block;
   padding: 13px 22.5px 11px;
@@ -78,56 +65,43 @@ h2 {
   cursor: pointer;
   margin: 2px auto;
 }
-
 .button:hover {
   background-color: #39c;
   color: #fff;
 }
-
 .button:active {
   color: #fff;
 }
-
-.button.is-checked,
-.button:active {
+.button.is-checked, .button:active {
   background-color: #102f3f;
 }
-
 .button:focus {
   outline: 0;
 }
-
 .button.is-checked {
   color: #fff;
 }
-
-.button-group:after,
-.grid:after {
+.button-group:after, .grid:after {
   content: "";
   display: block;
   clear: both;
 }
-
 .button-group {
   border-radius: 0;
   margin: 0 auto;
 }
-
 .grid {
   background: 0 0;
   width: 100%;
 }
-
 .grid > div {
   overflow: hidden;
 }
-
 .grid > div:hover {
   -webkit-transform: scale(1.015);
   transform: scale(1.015);
   transition: 0.2s;
 }
-
 .grid img {
   width: 100%;
   height: 100%;
@@ -136,33 +110,25 @@ h2 {
   -o-object-position: top;
   object-position: top;
 }
-
-.ui-group,
-.ui-group .button-group {
+.ui-group, .ui-group .button-group {
   display: inline-block;
 }
-
-.content,
-.video-bg {
+.content, .video-bg {
   height: var(--content-width);
 }
-
 .content {
   width: var(--content-width);
   margin: var(--content-space);
   box-shadow: 0 0 0 1px #c0e0ef;
 }
-
 .video-bg {
   width: calc(var(--content-width)*1.8);
   margin-left: -40%;
-  border: 0
+  border: 0;
 }
-
 .featherlight-content {
   scrollbar-width: none;
 }
-
 .blocker {
   position: absolute;
   height: 100%;
@@ -170,15 +136,12 @@ h2 {
   z-index: 1;
   background: 0 0;
 }
-
 .linkwrap iframe {
   z-index: 2;
 }
-
 .inline {
   display: none;
 }
-
 .caption {
   position: fixed;
   bottom: 0;
@@ -192,73 +155,57 @@ h2 {
   line-height: 18px;
   background: rgba(4, 12, 16, 0.66);
 }
-
-.featherlight,
-.featherlight-content {
+.featherlight, .featherlight-content {
   padding: 0 !important;
   border-bottom: 0 !important;
 }
-
 .featherlight {
   background: rgba(4, 12, 16, 0.9) !important;
 }
-
 .featherlight-content {
   background: 0 0 !important;
 }
-
 .featherlight-iframe .featherlight-inner {
   width: calc(var(--height)*1.788);
   --height: 75vh;
   height: var(--height);
   max-width: 100%;
 }
-
-.featherlight-content #ppt-16x9,
-.featherlight-content #ppt-16x9-2 {
+.featherlight-content #ppt-16x9, .featherlight-content #ppt-16x9-2 {
   height: calc(var(--width)*0.587);
   --width: 1177px;
   width: var(--width);
   max-width: 100%;
 }
-
 .featherlight-content #anim {
   height: calc(var(--width)*0.6);
   --width: 600px;
   width: var(--width);
   max-width: 100%;
 }
-
 .featherlight-content #ppt-4x3 {
   height: calc(var(--width)*0.772);
   --width: 853px;
   width: var(--width);
   max-width: 100%;
 }
-
 .featherlight-content #budget {
   height: var(--width);
   --width: 80vh;
   width: var(--width);
   max-width: 100%;
 }
-
 @media only screen and (max-width: 1228px) {
   :root {
     --grid-width: 100vw;
-    --content-width: calc(
-       (var(--grid-width) - (var(--content-space) * 10)) / 5
-    );
+    --content-width: calc((var(--grid-width) - (var(--content-space) * 10)) / 5);
   }
-
   h2 {
     font-size: 6.6vw;
   }
-
   .grid {
     width: var(--grid-width);
   }
-
   .portfolio {
     padding: 0;
     margin-top: 0;
@@ -266,11 +213,9 @@ h2 {
     min-width: 100%;
     box-shadow: none;
   }
-
   body {
     background-color: #fff;
   }
-
   .back {
     position: absolute;
     left: 16px;
@@ -278,34 +223,36 @@ h2 {
     margin: 0;
   }
 }
-
 @media only screen and (max-width: 900px) {
   :root {
-    --content-space: 3px;
     --grid-width: 100vw;
     --content-width: calc((var(--grid-width) - (var(--content-space) * 8)) / 4);
   }
-
   .grid {
     width: var(--grid-width);
   }
-
   h2 {
     font-size: 9.7vw;
   }
 }
-
 @media only screen and (max-width: 600px) {
   :root {
     --content-width: calc((var(--grid-width) - (var(--content-space) * 6)) / 3);
   }
-
-  .button {
+  .back, .button {
     font-size: 0.88em;
+  }
+  .button {
     padding: 11px 20px 10px;
   }
-
   h2 {
     font-size: 14vw;
+    padding-top: 14px;
+  }
+  .back {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    margin: 0;
   }
 }
