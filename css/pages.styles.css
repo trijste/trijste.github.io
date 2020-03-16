@@ -99,7 +99,7 @@ h3 a {
     transition: all .33s ease
 }
 h3 a:hover {
-	text-decoration: underline;
+	background: #0070ff;
     transition: all .33s ease
 }
 @media screen and (max-width: 32em) {
