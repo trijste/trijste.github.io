@@ -96,10 +96,11 @@ h3 a {
     background: -webkit-linear-gradient(right, #102f3f, #ddd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: all ease .33s
+    transition: all .33s ease
 }
 h3 a:hover {
-	text-decoration: underline
+	text-decoration: underline;
+    transition: all .33s ease
 }
 @media screen and (max-width: 32em) {
 h1.huge {
