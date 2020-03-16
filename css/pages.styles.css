@@ -93,9 +93,7 @@ h3.home {
 }
 h3 a {
     text-decoration: none;
-    background: -webkit-linear-gradient(right, #102f3f, #ddd);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #102f3f;
 }
 h3 a:hover {
 	color: #0070ff;
