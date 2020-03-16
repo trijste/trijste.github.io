@@ -91,7 +91,16 @@ h3.home {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-
+h3 a {
+    text-decoration: none;
+    background: -webkit-linear-gradient(right, #102f3f, #ddd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all ease .33s
+}
+h3 a:hover {
+	text-decoration: underline
+}
 @media screen and (max-width: 32em) {
 h1.huge {
 	font: normal normal 700 4em/.8em "Inter", sans-serif;
