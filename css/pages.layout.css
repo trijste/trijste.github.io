@@ -68,7 +68,7 @@
     .fade {
       position: absolute;
       top: 0px;
-      left: 0px;
+      left: 1px;
       width: var(--boxheight);
       height: 100%;
       background: transparent;
