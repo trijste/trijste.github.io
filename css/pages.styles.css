@@ -4,324 +4,334 @@
 
 /********************************************/
 
-@import url('https://rsms.me/inter/inter.css');
+@import url("https://rsms.me/inter/inter.css");
 html {
-	font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 @supports (font-variation-settings: normal) {
- html {
-font-family: 'Inter var', sans-serif;
-}
+  html {
+    font-family: "Inter var", sans-serif;
+  }
 }
 /* backgrounds */
 
 #item1 {
-	background: hsl(0, 0%, 100%) url() no-repeat 0 0;
-	background-size: contain;
+  background: hsl(0, 0%, 100%) url() no-repeat 0 0;
+  background-size: contain;
 }
 #item2 {
-	background: #102f3f url() no-repeat 0 0;
-	background-size: contain;
-	color: white;
+  background: #102f3f url() no-repeat 0 0;
+  background-size: contain;
+  color: white;
 }
 #item3 {
-	background: #103F1A url() no-repeat 0 0;
-	background-size: contain;
-	color: white;
+  background: #103f1a url() no-repeat 0 0;
+  background-size: contain;
+  color: white;
 }
 #item4 {
-	background: hsl(0, 0%, 100%) url() no-repeat right 0;
-	background-size: contain;
+  background: hsl(0, 0%, 100%) url() no-repeat right 0;
+  background-size: contain;
 }
 #item5 {
-	background: hsl(0, 0%, 100%) url() no-repeat 0 0;
-	background-size: contain;
+  background: hsl(0, 0%, 100%) url() no-repeat 0 0;
+  background-size: contain;
 }
 #item6 {
-	background: hsl(0, 0%, 100%) url() no-repeat 0 0;
-	background-size: contain;
+  background: hsl(0, 0%, 100%) url() no-repeat 0 0;
+  background-size: contain;
 }
 #item7 {
-	background: hsl(0, 0%, 100%) url() no-repeat center center;
-	background-size: 60%;
+  background: hsl(0, 0%, 100%) url() no-repeat center center;
+  background-size: 60%;
 }
 #item8 {
-	background: hsl(0, 2%, 14%) url() no-repeat 0 0;
-	background-size: contain;
-	color: white;
+  background: hsl(0, 2%, 14%) url() no-repeat 0 0;
+  background-size: contain;
+  color: white;
 }
 #item9 {
-	background: hsl(0, 0%, 100%);
+  background: hsl(0, 0%, 100%);
 }
 #item10 {
-	background: hsl(227, 97%, 31%);
+  background: hsl(227, 97%, 31%);
 }
 #item11 {
-	background: hsl(0, 0%, 0%) url() no-repeat 0 0;
-	background-size: contain;
-	color: white;
+  background: hsl(0, 0%, 0%) url() no-repeat 0 0;
+  background-size: contain;
+  color: white;
 }
 #item12 {
-	background: hsl(0, 0%, 0%) url() no-repeat 0 0;
-	background-size: contain;
-	color: white;
+  background: hsl(0, 0%, 0%) url() no-repeat 0 0;
+  background-size: contain;
+  color: white;
 }
 body {
-	font: 16px/1.5em "Inter", sans-serif;
+  font: 16px/1.5em "Inter", sans-serif;
 }
 h2 {
-	font: normal normal 500 4.706em "Inter", sans-serif;
-	letter-spacing: -.015em;
-	line-height: normal;
-	background: -webkit-linear-gradient(right, #102f3f, #fff);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  font: normal normal 500 4.706em "Inter", sans-serif;
+  letter-spacing: -0.015em;
+  line-height: normal;
+  background: -webkit-linear-gradient(right, #102f3f, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 h1.huge {
-	font: normal normal 700 8.941em / .88em "Inter", sans-serif;
-	position: relative;
-	top: -.2em;
-	letter-spacing: -.0066em;
-	background: -webkit-linear-gradient(right, #102f3f, #fff);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  font: normal normal 700 8.941em / 0.88em "Inter", sans-serif;
+  position: relative;
+  top: -0.2em;
+  letter-spacing: -0.0066em;
+  background: -webkit-linear-gradient(right, #102f3f, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 h3.home {
-	background: -webkit-linear-gradient(right, #102f3f, #ddd);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(right, #102f3f, #57a0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 h3 a {
-    text-decoration: none;
-    color: #102f3f;
+  text-decoration: none;
+  color: #102f3f;
 }
 h3 a:hover {
-	color: #0070ff;
-    transition: all .33s ease
+  color: #0070ff;
+  transition: all 0.33s ease;
 }
 @media screen and (max-width: 32em) {
-h1.huge {
-	font: normal normal 700 4em/.8em "Inter", sans-serif;
-}
+  h1.huge {
+    font: normal normal 700 4em/0.8em "Inter", sans-serif;
+  }
 }
 
 /* match landscape breakpoint*/
 
 @media screen and (max-width: 32em) {
-.menu {
-	max-height: 100vh;
-	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
-	padding-top: 0 !important;
-}
-.menu ul {
-	margin-top: 0em;
-}
+  .menu {
+    max-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 0 !important;
+  }
+  .menu ul {
+    margin-top: 0em;
+  }
 }
 
 @media screen and (max-height: 40em) {
-.menu {
-	max-height: 100vh;
-	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
-	padding-top: 0 !important;
+  .menu {
+    max-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 0 !important;
+  }
+  .menu ul {
+    margin-top: 0em;
+  }
 }
-.menu ul {
-	margin-top: 0em;
-}
-}
-.layout>.content h2 {
-	margin-top: 0;
+.layout > .content h2 {
+  margin-top: 0;
 }
 blockquote {
-	font: normal 1.5em/1.5em "Inter", sans-serif;
+  font: normal 1.5em/1.5em "Inter", sans-serif;
 }
 blockquote .author {
-	font-size: .75em;
-	color: white;
-	margin-top: 2em;
+  font-size: 0.75em;
+  color: white;
+  margin-top: 2em;
 }
 #item1 .layout a.next-page {
-	color: white;
-	background: black;
+  color: white;
+  background: black;
 }
 #item2 .layout a.next-page {
-	color: black;
-	background: white;
+  color: black;
+  background: white;
 }
 #item3 .layout a.next-page {
-	color: black;
-	background: white;
+  color: black;
+  background: white;
 }
 #item4 .layout a.next-page {
-	color: black;
-	background: white;
+  color: black;
+  background: white;
 }
 #item5 .layout a.next-page {
-	color: black;
-	background: white;
+  color: black;
+  background: white;
 }
 #item6 .layout a.next-page {
-	color: black;
-	background: white;
+  color: black;
+  background: white;
 }
 #item7 .layout a.next-page {
-	color: white;
-	background: black;
+  color: white;
+  background: black;
 }
 #item8 .layout a.next-page {
-	color: black;
-	background: white;
+  color: black;
+  background: white;
 }
 #item9 .layout a.next-page {
-	color: black;
-	background: white;
+  color: black;
+  background: white;
 }
 #item10 .layout a.next-page {
-	color: black;
-	background: white;
+  color: black;
+  background: white;
 }
 #item11 .layout a.next-page {
-	color: black;
-	background: white;
+  color: black;
+  background: white;
 }
 #item12 .layout a.next-page {
-	color: black;
-	background: white;
+  color: black;
+  background: white;
 }
 
 /* used for two col page*/
 
 @media screen and (max-width: 32em) {
-h2 {
-	font: normal 500 3.4em "Inter", sans-serif;
-	margin-top: 1.75em;
-	line-height: normal;
-}
+  h2 {
+    font: normal 500 3.4em "Inter", sans-serif;
+    margin-top: 1.75em;
+    line-height: normal;
+  }
 }
 /* Diagnostic */
 
 #breakpoint {
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 10000;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10000;
 }
 #breakpoint .webkit {
-	background: green;
-	color: white;
-	display: none;
+  background: green;
+  color: white;
+  display: none;
 }
 #breakpoint .edge {
-	background: green;
-	color: white;
-	display: none;
+  background: green;
+  color: white;
+  display: none;
 }
 #breakpoint .ie {
-	background: green;
-	color: white;
-	display: none;
+  background: green;
+  color: white;
+  display: none;
 }
 #breakpoint .unsupported {
-	background: green;
-	color: white;
-	display: none;
+  background: green;
+  color: white;
+  display: none;
 }
 #breakpoint .desk {
-	background: cyan;
-	color: black;
-	display: none;
+  background: cyan;
+  color: black;
+  display: none;
 }
 #breakpoint .deskTab {
-	background: yellow;
-	color: black;
-	display: none;
+  background: yellow;
+  color: black;
+  display: none;
 }
 #breakpoint .mob {
-	background: orange;
-	color: black;
-	display: none;
+  background: orange;
+  color: black;
+  display: none;
 }
-::-moz-selection { /* Code for Firefox */
- color: inherit;
- background: inherit;
+::-moz-selection {
+  /* Code for Firefox */
+  color: inherit;
+  background: inherit;
 }
 ::selection {
-	color: inherit;
-	background: inherit;
+  color: inherit;
+  background: inherit;
 }
 * {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 form > div {
-	clear: both;
-	overflow: hidden;
-	padding: 1px;
-	margin: 0 0 10px 0;
+  clear: both;
+  overflow: hidden;
+  padding: 1px;
+  margin: 0 0 10px 0;
 }
 form > div > fieldset > div > div {
-	margin: 0 0 5px 0;
+  margin: 0 0 5px 0;
 }
-form > div > label, legend {
-	width: 25%;
-	float: left;
-	padding-right: 10px;
+form > div > label,
+legend {
+  width: 25%;
+  float: left;
+  padding-right: 10px;
 }
-form > div > div, form > div > fieldset > div {
-	width: 75%;
-	float: right;
+form > div > div,
+form > div > fieldset > div {
+  width: 75%;
+  float: right;
 }
 form > div > fieldset label {
-	font-size: 90%;
+  font-size: 90%;
 }
 fieldset {
-	border: 0;
-	padding: 0;
+  border: 0;
+  padding: 0;
 }
-input, textarea {
-	font: 16px/1.5em "Inter", sans-serif;
-	color: #222;
-	border: 1px solid #eff7fb;
-	background: #fff;
-	padding: 1em;
-	transition: all 0.3s ease-in-out;
-	width: 100%;
-	resize: none;
+input,
+textarea {
+  font: 16px/1.5em "Inter", sans-serif;
+  color: #222;
+  border: 1px solid #eff7fb;
+  background: #fff;
+  padding: 1em;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  resize: none;
 }
 textarea {
-	height: 8em;
+  height: 8em;
 }
-input:focus, textarea:focus {
-	border-color: #3399cc;
-	outline: none;
+input:focus,
+textarea:focus {
+  border-color: #3399cc;
+  outline: none;
 }
 form input {
-	margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
 }
 form textarea {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
-button, a.button {
-	font: 16px/1.5em "Inter", sans-serif;
-	text-transform: uppercase;
-	font-weight: 700;
-	letter-spacing: .1em;
-	border: 1px solid #102f3f;
-	background-color: #102f3f;
-	color: #fff;
-	padding: 0.832em 1.414em 0.707em;
+button,
+a.button {
+  font: 16px/1.5em "Inter", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border: 1px solid #102f3f;
+  background-color: #102f3f;
+  color: #fff;
+  padding: 0.832em 1.414em 0.707em;
 }
-button:hover, a.button:hover {
-	border-color: #3399cc;
-	background-color: #3399cc;
-	color: #fff;
+button:hover,
+a.button:hover {
+  border-color: #3399cc;
+  background-color: #3399cc;
+  color: #fff;
 }
-button[disabled], button[disabled]:hover, a.button[disabled], a.button[disabled]:hover {
-	color: #fff;
-	border-color: #918f8d;
-	background-color: #918f8d;
+button[disabled],
+button[disabled]:hover,
+a.button[disabled],
+a.button[disabled]:hover {
+  color: #fff;
+  border-color: #918f8d;
+  background-color: #918f8d;
 }
 
 /*
